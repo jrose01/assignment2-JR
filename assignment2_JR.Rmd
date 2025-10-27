@@ -1,0 +1,32 @@
+---
+title: "Assignment2"
+author: "Jen Rose"
+date: "2025-10-25"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### QAC380 Assignment 2 Descriptive Statistics and Plots
+```{r assignment2, warning=FALSE, message=FALSE}
+# load packages
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(Hmisc)
+library(descr)
+
+# call in the data set
+penguins <- read_csv("C:/Users/Jen Rose/Documents/GitHub/assignment2-JR/penguins.csv")
+
+# data structure
+str(penguins)
+
+# descriptives
+describe(penguins$body_mass_g)
+freq(penguins$species)
+
+```
